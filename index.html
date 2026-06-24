@@ -61,10 +61,15 @@
         <div id="statusText" class="font-bold text-lg mt-2"></div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>
-        const supabaseClient = supabase.createClient('https://ertvtbcuqsjrejfmokxf.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVydHZ0YmN1cXNqcmVqZm1va3hmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIyNzA1ODAsImV4cCI6MjA5Nzg0NjU4MH0.K3PD45Rerd72zei_JSA0Cuj1CYjqXrdcDJZwRJpHH5U');
+        // Di GitHub kodenya cuma begini. PURE tanpa API Key.
+        // Vercel bakal ganti teks ini otomatis pas lagi proses deploy.
+        const SUPABASE_URL = 'VERCEL_REPLACE_URL';
+        const SUPABASE_ANON_KEY = 'VERCEL_REPLACE_KEY';
         
+        const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
         const fileInput = document.getElementById('fileInput');
         const fileList = document.getElementById('fileList');
         const progressBar = document.getElementById('progressBar');
